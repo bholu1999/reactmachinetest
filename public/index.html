@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -24,7 +24,127 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>BazarMoynaguri</title>
+
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all"/>
+    <link href="css/responsive.css" type="text/css" rel="stylesheet" media="all"/>    
+   
+    <!--bootstrape-->
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="all"/>
+    
+    <!--font-awesome-->
+    <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" media="all"/>
+    
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet"> 
+    
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>   
+  
+    <!-- Owl javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+       
+	<!-- category menu -->
+	<link rel="stylesheet" href="css/off_canvas_nav.css">
+	<link rel="stylesheet" href="css/style_category.css">
+	<script type="text/javascript" src="js/off_canvas_nav.js"></script>
+ 
+<!-- back to top -->
+<script src="js/jquery.scrollToTop.min.js"></script>
+
+<script type="text/javascript">
+  $(function() {
+    $("#toTop").scrollToTop(1000);
+  });
+  </script> 
+  <!-- back to top -->
+   
+   
+  <script>
+    $(document).ready(function() {
+    $("#offer").owlCarousel({
+    margin: 27,
+    autoplay:true,
+      autoplayTimeout:3000,
+    autoplayHoverPause:false,
+        nav: true,
+        loop: true,
+        responsive: {
+          0: {
+          items: 1
+          },
+          576: {
+          items: 1
+          },
+          768: {
+          items:2
+          },
+          992: {
+          items:2
+          },
+          1200: {
+          items:2,
+          },
+        }
+       });
+    })
+  </script>
+    
+  <script>
+    $(document).ready(function() {
+    $("#latest_product_slider").owlCarousel({
+    margin:0,
+    autoplay:true,
+      autoplayTimeout:3000,
+    autoplayHoverPause:false,
+        nav: true,
+        loop: true,
+        responsive: {
+          0: {
+          items: 2
+          },
+          576: {
+          items: 2
+          },
+          768: {
+          items:3
+          },
+          992: {
+          items:4
+          },
+          1200: {
+          items:5,
+          },
+        }
+       });
+    })
+  </script>
+  
+   
+  
+  <script type="text/javascript">
+  $(window).on('scroll', function (){
+  let h = $(window).scrollTop();
+  if (h > 80) {
+  $('.two_in_one').addClass('fixed-header');
+  } else {
+  $('.two_in_one').removeClass('fixed-header');
+  }
+  });
+  if ($(window).scrollTop() > 38) {
+  $('.two_in_one').addClass('fixed-header');
+  } else {
+  $('.two_in_one').removeClass('fixed-header');
+  }
+  </script>
+  
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +159,14 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <a href="#top" id="toTop"></a>
+ 
+<!--category menu-->
+<script>
+	offCanvasNav({
+		target_nav: '.dropdown',
+		nav_next_btn: '<i class="icon-right"></i>'
+	});
+</script>
   </body>
 </html>
